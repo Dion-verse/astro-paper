@@ -10,14 +10,17 @@ const posts = defineCollection({
   schema: ({ image }) =>
     z.object({
       author: z.string().default(config.site.author),
-      pubDatetime: z.date().or(z.string().transform(s => new Date(s))),
+      pubDatetime: z
+        .date()
+        .or(z.string().transform(s => new Date(s)))
+        .default(() => new Date()),
       modDatetime: z.date().optional().nullable(),
-      title: z.string(),
-      featured: z.boolean().optional(),
-      draft: z.boolean().optional(),
+      title: z.string().default("Untitled"),
+      featured: z.boolean().optional().default(false),
+      draft: z.boolean().optional().default(false),
       tags: z.array(z.string()).default(["others"]),
       ogImage: image().or(z.string()).optional(),
-      description: z.string(),
+      description: z.string().default(""),
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       hideToc: z.boolean().optional(),
