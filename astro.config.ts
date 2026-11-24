@@ -22,8 +22,15 @@ import {
 } from "./src/utils/rehypeInlineToc";
 import config from "./astro-paper.config";
 
+const isUserSite = process.env.GITHUB_REPOSITORY?.endsWith(".github.io");
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
+const defaultBase = repoName && !isUserSite ? `/${repoName}` : "/";
+const base = process.env.BASE_PATH || (process.env.CI ? defaultBase : "/");
+const site = process.env.SITE_URL || config.site.url;
+
 export default defineConfig({
-  site: config.site.url,
+  site,
+  base,
   integrations: [
     mdx(),
     sitemap({

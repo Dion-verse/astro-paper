@@ -1,37 +1,30 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "What Fieldnotes is, who writes it, and why this corner of the internet exists."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+# A small corner of the open web.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+**Fieldnotes** is an independent personal publication dedicated to practical notes, thoughtful guides, and useful ideas for curious minds.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+> *Ideas worth keeping. Notes worth sharing.*
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## Why this publication exists
 
-## Features
+The modern web is crowded with recycled noise and automated filler. This space is built around a simpler, quieter editorial standard:
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+- **Depth over brevity**: Clear explanations that actually help someone complete a task or understand an architecture.
+- **Evidence and experience**: Direct lessons from engineering, building tools, and solving complex technical challenges.
+- **Living documents**: Content that is revisited and refined as tools, APIs, and frameworks evolve.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## What you will find here
 
-and so much more.
+1. **Practical Guides**: Repeatable technical patterns, architecture blueprints, and development walkthroughs.
+2. **Field Notes & Case Studies**: First-hand accounts of building systems, debugging production issues, and orchestrating workflows.
+3. **Curated Resources**: Tool reviews, reading lists, and mental models worth preserving.
 
-## Show your support
+---
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+### Behind the byline
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+Written and published by **Dawda Mbowe**. Built with [AstroPaper](https://github.com/satnaing/astro-paper) on Astro, styled with Tailwind CSS, indexed statically with Pagefind, and served openly on GitHub Pages.

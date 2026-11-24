@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title">
+  <title id="title">Organic growth through connected ideas</title>
+  <rect width="1200" height="720" fill="#e6d6c8"/>
+  <circle cx="940" cy="190" r="250" fill="#efc2ac"/>
+  <path d="M0 550 Q300 470 560 570 T1200 530 V720 H0Z" fill="#b6b99b"/>
+  <g fill="none" stroke="#777d55" stroke-width="14" stroke-linecap="round">
+    <path d="M600 600 Q570 440 610 280 Q645 160 790 105"/>
+    <path d="M606 420 Q470 335 370 240"/>
+    <path d="M595 500 Q750 400 890 355"/>
+  </g>
+  <g fill="#777d55">
+    <ellipse cx="785" cy="105" rx="78" ry="35" transform="rotate(-28 785 105)"/>
+    <ellipse cx="370" cy="240" rx="80" ry="33" transform="rotate(32 370 240)"/>
+    <ellipse cx="890" cy="355" rx="85" ry="36" transform="rotate(-15 890 355)"/>
+  </g>
+  <g fill="#c85c3d"><circle cx="600" cy="600" r="18"/><circle cx="610" cy="280" r="13"/></g>
+  <text x="80" y="650" font-family="Georgia,serif" font-size="34" fill="#3b4136">Grow by connecting the dots.</text>
+</svg>

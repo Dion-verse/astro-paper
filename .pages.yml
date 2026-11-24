@@ -1,0 +1,70 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/content/posts
+    format: frontmatter
+    view:
+      fields: [title, pubDatetime, draft, featured]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: string
+        required: true
+      - name: pubDatetime
+        label: Publish Date
+        type: date
+        required: true
+      - name: modDatetime
+        label: Modified Date
+        type: date
+      - name: author
+        label: Author
+        type: string
+        default: Dawda Mbowe
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: tags
+        label: Tags
+        type: list
+      - name: ogImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: pages
+    label: Pages
+    type: collection
+    path: src/content/pages
+    format: frontmatter
+    view:
+      fields: [title, description]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: string
+      - name: body
+        label: Body
+        type: rich-text

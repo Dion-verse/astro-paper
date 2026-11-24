@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title">
+  <title id="title">Fieldnotes — ideas worth keeping</title>
+  <rect width="1200" height="720" fill="#d8d4c8"/>
+  <circle cx="900" cy="150" r="250" fill="#c1bda9"/>
+  <path d="M0 540 Q280 410 530 560 T1200 500 V720 H0Z" fill="#b7b69d"/>
+  <g transform="translate(380 120) rotate(-7 230 240)">
+    <rect x="25" y="25" width="470" height="500" rx="8" fill="#b5a999" opacity=".45"/>
+    <rect x="0" y="0" width="470" height="500" rx="8" fill="#f4f1e9"/>
+    <path d="M60 100H405 M60 150H350 M60 200H385 M60 250H320 M60 330H405 M60 380H350" stroke="#c9c3b7" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="380" cy="390" r="64" fill="#c85c3d"/>
+    <text x="380" y="410" text-anchor="middle" font-family="Georgia,serif" font-size="62" fill="#fff">f.</text>
+  </g>
+  <text x="80" y="650" font-family="Georgia,serif" font-size="34" fill="#363a32">Notes for the curious.</text>
+</svg>
