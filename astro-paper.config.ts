@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://dion-verse.github.io/",
+    url: "https://dion-verse.github.io/astro-paper/",
     title: "FIELDNOTES",
     description: "Notes, ideas, and things worth sharing.",
     author: "Dawda Mbowe",
@@ -23,7 +23,7 @@ export default defineAstroPaperConfig({
     showBackButton: true,
     editPost: {
       enabled: true,
-      url: "https://github.com/Dion-verse/dion-verse.github.io/edit/main/",
+      url: "https://github.com/Dion-verse/astro-paper/edit/main/",
     },
     search: "pagefind",
     toc: true,
