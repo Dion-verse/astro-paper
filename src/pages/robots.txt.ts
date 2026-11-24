@@ -1,13 +1,13 @@
 import type { APIRoute } from "astro";
 
-const getRobotsTxt = (sitemapURL: URL) => `
+const getRobotsTxt = (sitemapURL: string) => `
 User-agent: *
 Allow: /
 
-Sitemap: ${sitemapURL.href}
+Sitemap: ${sitemapURL}
 `;
 
-export const GET: APIRoute = ({ site }) => {
-  const sitemapURL = new URL("sitemap-index.xml", site);
+export const GET: APIRoute = () => {
+  const sitemapURL = "https://dion-verse.github.io/astro-paper/sitemap-index.xml";
   return new Response(getRobotsTxt(sitemapURL));
 };
