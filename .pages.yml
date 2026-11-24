@@ -1,10 +1,10 @@
 media:
-  input: public/images
-  output: /images
+  input: public/images/posts
+  output: /images/posts
 
 content:
   - name: posts
-    label: Posts
+    label: Articles & Notes
     type: collection
     path: src/content/posts
     format: frontmatter
@@ -13,44 +13,58 @@ content:
       primary: title
     fields:
       - name: title
-        label: Title
+        label: Article Title
         type: string
         required: true
       - name: description
-        label: Description
+        label: Summary / Description
         type: string
         required: true
       - name: pubDatetime
-        label: Publish Date
+        label: Published Date
         type: date
         required: true
       - name: modDatetime
-        label: Modified Date
+        label: Last Modified Date
         type: date
       - name: author
-        label: Author
+        label: Author Name
         type: string
         default: Dawda Mbowe
+      - name: tags
+        label: Tags / Topics
+        type: list
       - name: featured
-        label: Featured
+        label: Feature on Homepage
         type: boolean
         default: false
       - name: draft
-        label: Draft
+        label: Save as Draft
         type: boolean
         default: false
-      - name: tags
-        label: Tags
-        type: list
       - name: ogImage
-        label: Cover Image
+        label: Custom Social / Header Image
         type: image
+      - name: canonicalURL
+        label: Canonical URL (Optional)
+        type: string
+      - name: timezone
+        label: Time Zone (e.g. UTC, America/New_York)
+        type: string
+      - name: hideToc
+        label: Hide Table of Contents
+        type: boolean
+        default: false
+      - name: hideEditPost
+        label: Hide Edit Post Link
+        type: boolean
+        default: false
       - name: body
-        label: Body
+        label: Article Body
         type: rich-text
 
   - name: pages
-    label: Pages
+    label: Standalone Pages
     type: collection
     path: src/content/pages
     format: frontmatter
@@ -59,12 +73,15 @@ content:
       primary: title
     fields:
       - name: title
-        label: Title
+        label: Page Title
         type: string
         required: true
       - name: description
-        label: Description
+        label: Meta Description
+        type: string
+      - name: canonicalURL
+        label: Canonical URL (Optional)
         type: string
       - name: body
-        label: Body
+        label: Page Content
         type: rich-text

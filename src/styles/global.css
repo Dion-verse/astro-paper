@@ -37,3 +37,17 @@
 :target {
   scroll-margin-block: 1rem;
 }
+
+/* ── Reduced-motion: honour the OS preference ───────────────────────────────
+   Users who prefer reduced motion get instant transitions instead of
+   animated ones. This is a WCAG 2.2 AA requirement (SC 2.3.3).             */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

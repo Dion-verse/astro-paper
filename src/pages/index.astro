@@ -9,7 +9,9 @@ import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import Card from "@/components/Card.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import Tag from "@/components/Tag.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getUniqueTags } from "@/utils/getUniqueTags";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
@@ -22,6 +24,7 @@ const posts = await getCollection("posts");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const tags = getUniqueTags(posts).slice(0, 10);
 const homePath = getRelativeLocaleUrl(locale, "");
 ---
 
@@ -58,6 +61,21 @@ const homePath = getRelativeLocaleUrl(locale, "");
       <p class="text-base sm:text-lg leading-relaxed text-foreground">
         An independent personal publication dedicated to thoughtful guides, architectural patterns, and practical ideas for curious minds.
       </p>
+      <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium">
+        <a
+          href={getRelativeLocaleUrl(locale, "about")}
+          class="text-accent underline underline-offset-4 hover:opacity-85"
+        >
+          About this publication &rarr;
+        </a>
+        <span class="text-muted-foreground hidden sm:inline">•</span>
+        <a
+          href={getRelativeLocaleUrl(locale, "archives")}
+          class="text-muted-foreground hover:text-foreground underline underline-offset-4"
+        >
+          Chronological archives
+        </a>
+      </div>
       {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
@@ -100,6 +118,29 @@ const homePath = getRelativeLocaleUrl(locale, "");
           <ul>
             {recentPosts.slice(0, postsConfig.perIndex).map(data => (
               <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      tags.length > 0 && (
+        <section id="topics" class="border-border border-t pt-10 pb-6 my-4">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-serif font-bold tracking-tight text-foreground">
+              Explore Topics
+            </h2>
+            <a
+              href={getRelativeLocaleUrl(locale, "tags")}
+              class="text-sm font-medium text-accent hover:underline underline-offset-4"
+            >
+              All topics &rarr;
+            </a>
+          </div>
+          <ul class="flex flex-wrap gap-2.5">
+            {tags.map(({ tag, tagName }) => (
+              <Tag {tag} {tagName} size="sm" />
             ))}
           </ul>
         </section>

@@ -45,6 +45,9 @@ jobs:
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Optional: add PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN as a repository
+          # secret in GitHub to enable Cloudflare Web Analytics.
+          PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

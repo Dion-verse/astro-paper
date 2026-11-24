@@ -1,5 +1,27 @@
 ---
-// Rendered right before </body> on every page. Add your own scripts
-// or widgets here. This file is yours: AstroPaper never changes it
-// after release.
+// Rendered right before </body> on every page.
+// AstroPaper never overwrites this file after release — it is yours.
+//
+// Cloudflare Web Analytics
+// ─────────────────────────
+// Set the PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN environment variable to your
+// Cloudflare Web Analytics beacon token to enable analytics.
+// When the variable is unset or empty, NO script is injected and the page
+// remains completely tracking-free.
+//
+// How to get your token:
+//   1. Log in to dash.cloudflare.com → Analytics & Logs → Web Analytics.
+//   2. Add your site and copy the "JS Snippet" token (32 hex characters).
+//   3. Add PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN=<token> to your .env file.
+//   4. In GitHub: Settings → Secrets → Actions → New repository secret.
+
+const cfToken = import.meta.env.PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN;
 ---
+
+{cfToken && (
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon={`{"token": "${cfToken}"}`}
+  ></script>
+)}
