@@ -1,0 +1,33 @@
+---
+export type Props = {
+  class?: string;
+  height?: number;
+};
+
+const { class: className = "", height = 26 } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 28"
+  height={height}
+  fill="none"
+  role="img"
+  aria-label="FIELDNOTES"
+  class:list={["inline-block overflow-visible", className]}
+>
+  <text
+    x="0"
+    y="21"
+    font-family="'Charter', 'Bitstream Charter', 'Sitka Text', 'Cambria', 'Georgia', serif"
+    font-size="22"
+    font-weight="700"
+    letter-spacing="0.12em"
+    fill="currentColor"
+    class="text-foreground transition-colors"
+  >
+    FIELDNOTES
+  </text>
+  <!-- Refined editorial accent mark -->
+  <circle cx="194" cy="20" r="3" class="fill-accent transition-colors" />
+</svg>

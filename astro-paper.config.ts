@@ -3,8 +3,8 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://dion-verse.github.io/fieldnotes/",
-    title: "Fieldnotes",
-    description: "Practical notes, thoughtful guides, and useful ideas for curious people.",
+    title: "FIELDNOTES",
+    description: "Notes, ideas, and things worth sharing.",
     author: "Dawda Mbowe",
     profile: "https://github.com/Dion-verse",
     ogImage: "social-card.png",

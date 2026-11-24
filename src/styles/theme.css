@@ -7,28 +7,31 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-serif: "Charter", "Bitstream Charter", "Sitka Text", "Cambria", "Georgia", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, Monaco, Consolas, monospace;
+  --font-app: var(--font-sans);
 }
 
-/* Light theme values — Fieldnotes warm editorial vellum palette */
+/* Light theme values — Fieldnotes paper-and-ink palette */
 :root,
 [data-theme="light"] {
-  --background: #fbf9f5;
-  --foreground: #1c1917;
-  --accent: #9a3412;
+  --background: #F7F5EF;
+  --foreground: #24231F;
+  --accent: #B65F49;
   --accent-foreground: #ffffff;
-  --muted: #f0ebe1;
-  --muted-foreground: #78716c;
-  --border: #e7e0d3;
+  --muted: #EFEBE2;
+  --muted-foreground: #77736B;
+  --border: #DED9CF;
 }
 
-/* Dark theme values — Fieldnotes deep espresso & burnished terracotta */
+/* Dark theme values — Fieldnotes obsidian night & warm terracotta */
 [data-theme="dark"] {
-  --background: #171513;
-  --foreground: #f5f0eb;
-  --accent: #ea580c;
-  --accent-foreground: #ffffff;
-  --muted: #292522;
-  --muted-foreground: #a8a29e;
-  --border: #38332e;
+  --background: #191A18;
+  --foreground: #EEEAE2;
+  --accent: #D58A70;
+  --accent-foreground: #191A18;
+  --muted: #252723;
+  --muted-foreground: #AAA69D;
+  --border: #373832;
 }
